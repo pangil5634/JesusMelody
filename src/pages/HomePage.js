@@ -1,9 +1,8 @@
-import {Button} from "@mui/material";
 import {Link} from "react-router-dom";
 import styled from "styled-components";
 
 export default function HomePage() {
-    return (
+    return (    
         <div>
             <h1>HomePage</h1>
             <Link to="/Test">
@@ -13,12 +12,17 @@ export default function HomePage() {
     );
 }
 
-const DefaultButton = styled(Button)`
+const DefaultButton = styled.button`
+    width : 100px;
+    height : 40px;
+
     background-color: #5CD1E5;
     color : white;
+
+    border : none;
             
     &:hover {
-        color : black;
         background-color: #B2EBF4;
+        color : black;
     }
 `;
