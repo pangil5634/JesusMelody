@@ -1,8 +1,10 @@
 import YouTube from "react-youtube";
 
-export default function Youtube() {
-    const VideoLink = "https://www.youtube.com/watch?v=ZXh5CS-pwXU"; // 동영상의 URL
-    const videoId = VideoLink.split("v=")[1];
+export default function Youtube({ songLink }) {
+    console.log("songLink", songLink);
+    const VideoLink = songLink || "https://www.youtube.com/watch?v=a5OajHLAhWM"; // songLink가 없으면 기본값 사용
+    const videoId = songLink ? songLink.split("v=")[1] : "a5OajHLAhWM";
+
     return (
         <YouTube
             key={videoId}
@@ -11,10 +13,11 @@ export default function Youtube() {
                 width: "854px",
                 height: "480px",
                 playerVars: {
-                    autoplay: 1,
+                    autoplay: 0,
                     modestbranding: 1,
-                    loop: 1,
+                    loop: 1
                 }
-            }}/>
+            }}
+        />
     );
 }
