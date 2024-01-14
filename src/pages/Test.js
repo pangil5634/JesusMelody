@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import Youtube from "./Youtube";
 import db from "../firebase";
 import {fetchData} from "../api/firebaseAPI";
-import { Button } from "@mui/material";
+import {Button} from "@mui/material";
 
 export default function Test() {
     const [myData, setMyData] = useState();
@@ -26,11 +26,21 @@ export default function Test() {
         <div>
             <h1>테스트 페이지입니다.</h1>
             {
-                myData && myData.map((data, index) => (
-                    <Button onClick = { () => selectNumberByButton(index)} key={index}>{data.songName}</Button>
-                ))
+                myData && <div>
+
+                        {
+                            myData.map((data, index) => (
+                                <Button onClick={() => selectNumberByButton(index)} key={index}>{data.songName}</Button>
+                            ))
+                        }
+                    <h1>{myData[selectNumber].songName} | {myData[selectNumber].singerName}</h1>
+                    </div>
             }
-            <Youtube songLink={myData ? myData[selectNumber].songLink : null} />
+
+            <Youtube
+                songLink={myData
+                    ? myData[selectNumber].songLink
+                    : null}/>
         </div>
     );
 }
