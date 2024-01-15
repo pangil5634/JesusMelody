@@ -8,6 +8,9 @@ export default function HomePage() {
             <Link to="/Test">
                 <DefaultButton>Test 이동하기</DefaultButton>
             </Link>
+            <Link to="/AddSong">
+                <DefaultButton>노래 추가하러 가기</DefaultButton>
+            </Link>
         </div>
     );
 }
@@ -25,4 +28,6 @@ const DefaultButton = styled.button`
         background-color: #B2EBF4;
         color : black;
     }
+    margin : 0px 10px;  
+    box-sizing: border-box;
 `;
