@@ -1,4 +1,5 @@
 import {useState} from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 function AddSongPage() {
@@ -17,6 +18,9 @@ function AddSongPage() {
         }));
     };
 
+    // 페이지 이동을 위한 navigator
+    const navigator = useNavigate();
+
     // 추가 버튼이 클릭되었을 때 입력된 내용을 확인하는 핸들러
     const handleAddButtonClick = () => {
 
@@ -33,6 +37,7 @@ function AddSongPage() {
             // 여기에 데이터 등록 등의 로직을 추가할 수 있습니다.
             alert("데이터 등록 완료");
             console.log("데이터 등록 완료!");
+            navigator("/"); // 페이지 이동
         } else {
             console.log("데이터 등록 취소");
         }
