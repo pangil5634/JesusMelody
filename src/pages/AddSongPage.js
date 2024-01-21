@@ -1,6 +1,7 @@
 import {useState} from "react";
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import styled from "styled-components";
+import { addData } from "../api/firebaseAPI";
 
 function AddSongPage() {
 
@@ -35,7 +36,8 @@ function AddSongPage() {
 
         if (window.confirm(confirmationMessage)) {
             // 여기에 데이터 등록 등의 로직을 추가할 수 있습니다.
-            alert("데이터 등록 완료");
+            addData(songData);
+            // alert("데이터 등록 완료");
             console.log("데이터 등록 완료!");
             navigator("/"); // 페이지 이동
         } else {
@@ -47,13 +49,16 @@ function AddSongPage() {
         <div>
             <h1>AddSongPage입니다.</h1>
             <InputArea
-                songData={songData}
-                handleInputChange={handleInputChange}
-                handleAddButtonClick={handleAddButtonClick}/>
+                songData={songData} // songData를 넘겨준다.
+                handleInputChange={handleInputChange} // onchange 핸들러를 넘겨준다.
+                handleAddButtonClick={handleAddButtonClick} // 등록 버튼 핸들러를 넘겨준다.
+            />
         </div>
     );
 }
 export default AddSongPage;
+
+
 
 // 입력을 위한 Div 컴포넌트
 const InputArea = (e) => {

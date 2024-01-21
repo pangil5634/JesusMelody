@@ -2,21 +2,26 @@ import {Link} from "react-router-dom";
 import styled from "styled-components";
 
 export default function HomePage() {
-    return (    
+    return (
         <div>
             <h1>HomePage</h1>
-            <Link to="/Test">
-                <DefaultButton>Test 이동하기</DefaultButton>
-            </Link>
-            <Link to="/AddSong">
-                <DefaultButton>노래 추가하러 가기</DefaultButton>
-            </Link>
+            <Div>
+                <Link to="/Test">
+                    <DefaultButton>Test 이동하기</DefaultButton>
+                </Link>
+                <Link to="/AddSong">
+                    <DefaultButton>노래 추가하러 가기</DefaultButton>
+                </Link>
+            </Div>
         </div>
     );
 }
 
-const DefaultButton = styled.button`
-    width : 100px;
+const Div = styled.div`
+    display: flex;
+`;
+const DefaultButton = styled.button `
+    width : 150px;
     height : 40px;
 
     background-color: #5CD1E5;

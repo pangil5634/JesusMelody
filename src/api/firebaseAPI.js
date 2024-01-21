@@ -22,3 +22,20 @@ export const fetchData = async (collectionName) => {
         return [];
     }
 }
+
+export const addData = (songData) => {
+    db.collection("songData")
+        .add({
+            songName: songData.songName,
+            singerName: songData.singerName,
+            songLink: songData.songURL,
+        })
+        .then((docRef) => {
+            console.log("DOcument written with ID : ", docRef.id);
+            alert("데이터 등록 완료");
+        })
+        .catch((error) => {
+            console.error("Error adding document : ", error);
+            alert("데이터 등록 실패");
+        });
+};
