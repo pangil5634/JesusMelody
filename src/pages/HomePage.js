@@ -1,9 +1,10 @@
 import {Link} from "react-router-dom";
 import styled from "styled-components";
+import SectionArea from "./Components/Layout/SectionArea";
 
 export default function HomePage() {
     return (
-        <div>
+        <SectionArea>
             <h1>HomePage</h1>
             <Div>
                 <Link to="/Test">
@@ -13,11 +14,11 @@ export default function HomePage() {
                     <DefaultButton>노래 추가하러 가기</DefaultButton>
                 </Link>
             </Div>
-        </div>
+        </SectionArea>
     );
 }
 
-const Div = styled.div`
+const Div = styled.div `
     display: flex;
 `;
 const DefaultButton = styled.button `

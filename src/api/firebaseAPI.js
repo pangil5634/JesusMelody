@@ -1,6 +1,7 @@
 import db from "../firebase";
 import { collection, query, getDocs, orderBy } from "firebase/firestore";
 
+// Get API
 export const fetchData = async (collectionName) => {
     try {
         const postsCollection = collection(db, collectionName);
@@ -23,6 +24,7 @@ export const fetchData = async (collectionName) => {
     }
 }
 
+// Post API
 export const addData = (songData) => {
     db.collection("songData")
         .add({
