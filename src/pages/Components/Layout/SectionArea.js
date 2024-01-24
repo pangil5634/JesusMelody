@@ -1,9 +1,12 @@
 import styled from "styled-components";
 
-export const SectionArea = styled.div`
-    width: 80%;
+const SectionArea = styled.div`
+    width: 100%;
     height : 100%;
-    
-    display: flex;
-    justify-content: center;
+    margin : 0 auto;
+    background-color: gray;
+
+
 `;
+
+export default SectionArea;

@@ -5,7 +5,7 @@ import SectionArea from "./Components/Layout/SectionArea";
 export default function HomePage() {
     return (
         <SectionArea>
-            <h1>HomePage</h1>
+            <span>HomePage</span>
             <Div>
                 <Link to="/Test">
                     <DefaultButton>Test 이동하기</DefaultButton>
