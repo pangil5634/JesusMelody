@@ -89,6 +89,12 @@ const InputArea = (e) => {
 
 // InputArea 컴포넌트의 Div 스타일
 const InputAreaDiv = styled.div `
+    @media screen and (max-width: 768px) {
+        width : 100%;
+        height : auto;
+        color: white;
+        background-color: black;
+    }
     width: 700px;
     height: 500px;
     padding: 50px;
@@ -183,3 +189,4 @@ const AddButton = styled.button `
         color: black;
     }
 `;
+
