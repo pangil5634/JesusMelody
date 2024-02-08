@@ -1,4 +1,4 @@
-import {Outlet} from "react-router-dom";
+import {Link, Outlet} from "react-router-dom";
 import styled from "styled-components";
 
 function Header() {
@@ -6,7 +6,7 @@ function Header() {
         <Container>
             <HeaderArea>
                 <FirstDiv>
-                    <Div width = "10%">로고</Div>
+                    <Div width="10%"><Link to = "/">로고</Link></Div>
                     <Div>검색</Div>
                 </FirstDiv>
                 <SecondDiv>메뉴 리스트</SecondDiv>
