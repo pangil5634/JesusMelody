@@ -4,7 +4,7 @@ import styled from "styled-components";
 function Header() {
     return (
         <Container>
-            <HeaderArea>
+            {/* <HeaderArea>
                 <FirstDiv>
                     <Div width="10%"><Link to = "/">로고</Link></Div>
                     <Div>검색</Div>
@@ -14,19 +14,27 @@ function Header() {
 
             <BodyArea>
                 <Outlet/>
-            </BodyArea>
+            </BodyArea> */}
         </Container>
     );
 }
 
 const Container = styled.div `
-    width : 100vw;
+    width : 1500px;
+    height : 100px;
+    background-color: red;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column; */
+    /* width : 100vw;
     height : 100vh;
 
     background-color: black;
 
     padding : 3vw;
-    box-sizing: border-box;
+    box-sizing: border-box; */
 `
 
 const HeaderArea = styled.div `
