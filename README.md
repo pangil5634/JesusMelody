@@ -9,3 +9,7 @@ Youtube 라이브러리를 활용하여 CCM 영상을 제공합니다.
 React / Firebase / Figma
 
 ### 개발자
+
+### 참고 링크
+
+https://welcoditta.tistory.com/11
