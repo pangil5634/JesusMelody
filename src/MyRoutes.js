@@ -5,10 +5,12 @@ import Test from "./pages/Test";
 import AddSongPage from "./pages/AddSongPage";
 import Header from "./Header";
 import Layout from "./Layout";
+import IntroPage from "./pages/IntroPage/IntroPage";
 const Routers = () => {
     return (
         <Router>
             <Routes>
+                <Route path="/intro" element={<IntroPage/>}/>
                 <Route path="" element={<Layout/>}>
                     <Route index element={<HomePage />}/>
                     <Route path="/AddSong" element={<AddSongPage />}/>
